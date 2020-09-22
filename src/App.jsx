@@ -1,9 +1,11 @@
 import "./App.css";
 import React from "react";
 
-import UsuarioInfo from './components/condicional/UsuarioInfo'
-import ParouImpar from './components/condicional/ParouImpar'
-import Produtos from './components/repeticao/Produtos'
+import IndiretaPai from "./components/comunicacao/IndiretaPai";
+import DiretaPai from "./components/comunicacao/DiretaPai";
+import UsuarioInfo from "./components/condicional/UsuarioInfo";
+import ParouImpar from "./components/condicional/ParouImpar";
+import Produtos from "./components/repeticao/Produtos";
 import ListaAlunos from "./components/repeticao/ListaAlunos";
 import Familia from "./components/basicos/Familia";
 import FamiliaMembro from "./components/basicos/FamiliaMembro";
@@ -14,52 +16,58 @@ import Fragmento from "./components/basicos/Fragmento";
 import Card from "./components/layout/Card";
 
 export default () => (
-    <div className="App">
-      <h1>Fundamentos React</h1>
+  <div className="App">
+    <h1>Fundamentos React</h1>
 
-      <div className="Cards">
+    <div className="Cards">
+      <Card titulo="#10 - Comunicação Indireta" color="#8BAD39">
+        <IndiretaPai></IndiretaPai>
+      </Card>
+      <Card titulo="#09 - Comunicação Direta" color="#59323C">
+        <DiretaPai></DiretaPai>
+      </Card>
       <Card titulo="#08 - Renderização Condicional" color="#982395">
-                <ParouImpar numero={21}></ParouImpar>
-                <UsuarioInfo usuario={{ nome: "Fernando" }} />
-                {/* <UsuarioInfo usuario={{}} />
+        <ParouImpar numero={21}></ParouImpar>
+        <UsuarioInfo usuario={{ nome: "Fernando" }} />
+        {/* <UsuarioInfo usuario={{}} />
                 <UsuarioInfo /> */}
-            </Card>
+      </Card>
 
-            <Card titulo="#07 - Desafio Repetição" color="#3A9AD9">
-                <Produtos></Produtos>
-            </Card>
+      <Card titulo="#07 - Desafio Repetição" color="#3A9AD9">
+        <Produtos></Produtos>
+      </Card>
 
-            <Card titulo="#06 - Repetição" color="#FF4C65">
-                <ListaAlunos></ListaAlunos>
-            </Card>
+      <Card titulo="#06 - Repetição" color="#FF4C65">
+        <ListaAlunos></ListaAlunos>
+      </Card>
 
-            <Card titulo="#05 - Componente com Filhos" color="#00C8F8">
-                <Familia sobrenome="Silva">
-                    <FamiliaMembro nome="Pedro" />
-                    <FamiliaMembro nome="Ana" />
-                    <FamiliaMembro nome="Gustavo" />
-                </Familia>
-            </Card>
+      <Card titulo="#05 - Componente com Filhos" color="#00C8F8">
+        <Familia sobrenome="Silva">
+          <FamiliaMembro nome="Pedro" />
+          <FamiliaMembro nome="Ana" />
+          <FamiliaMembro nome="Gustavo" />
+        </Familia>
+      </Card>
 
-            <Card titulo="#04 - Desafio Aleatório" color="#FA6900">
-                <Aleatorio min={1} max={60} />
-            </Card>
+      <Card titulo="#04 - Desafio Aleatório" color="#FA6900">
+        <Aleatorio min={1} max={60} />
+      </Card>
 
-            <Card titulo="#03 - Fragmento" color="#E94C6F">
-                <Fragmento />
-            </Card>
+      <Card titulo="#03 - Fragmento" color="#E94C6F">
+        <Fragmento />
+      </Card>
 
-            <Card titulo="#02 - Com Parâmetro" color="#E8B71A">
-                <ComParametro
-                    titulo="Situação do Aluno"
-                    aluno="Pedro Silva"
-                    nota={9.3}
-                />
-            </Card>
+      <Card titulo="#02 - Com Parâmetro" color="#E8B71A">
+        <ComParametro
+          titulo="Situação do Aluno"
+          aluno="Pedro Silva"
+          nota={9.3}
+        />
+      </Card>
 
-            <Card titulo="#01 - Primeiro Componente" color="#588C73">
-                <Primeiro></Primeiro>
-            </Card>
-      </div>
+      <Card titulo="#01 - Primeiro Componente" color="#588C73">
+        <Primeiro></Primeiro>
+      </Card>
     </div>
+  </div>
 );
